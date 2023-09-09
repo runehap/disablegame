@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 171711932}
   - component: {fileID: 171711931}
   m_Layer: 0
-  m_Name: subway station-Sheet2_1
+  m_Name: stick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300,8 +300,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171711930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 172.57, y: -0.08, z: 0}
-  m_LocalScale: {x: 1.5206296, y: 2.1700678, z: 1}
+  m_LocalPosition: {x: 174.3624, y: 1.0729, z: 0}
+  m_LocalScale: {x: 1.8783565, y: 2.5426044, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -488,8 +488,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549362542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 166.4621, y: 0.2347, z: 0}
-  m_LocalScale: {x: 1.4273, y: 1.5567, z: 1}
+  m_LocalPosition: {x: 167.334, y: 1.5036, z: 0}
+  m_LocalScale: {x: 1.637113, y: 1.9334214, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -508,6 +508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   albedo: 1
+  color: {r: 0, g: 0, b: 0, a: 0}
   albedospeed: 5
 --- !u!50 &549362546
 Rigidbody2D:
@@ -872,11 +873,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1619706075}
   - component: {fileID: 1619706074}
-  - component: {fileID: 1619706076}
   - component: {fileID: 1619706078}
   - component: {fileID: 1619706077}
+  - component: {fileID: 1619706079}
+  - component: {fileID: 1619706080}
   m_Layer: 0
-  m_Name: subway station-Sheet2_0
+  m_Name: subway station
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -942,27 +944,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619706073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 175.308, y: -0.69, z: 0}
-  m_LocalScale: {x: 1.649, y: 2.1114, z: 1}
+  m_LocalPosition: {x: 177.48, y: 0.3551, z: 0}
+  m_LocalScale: {x: 1.891403, y: 2.6223586, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1619706076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619706073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f89f7caf656ae2c42b5580e403c86bfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  albedo: 1
-  albedospeed: 5
 --- !u!50 &1619706077
 Rigidbody2D:
   serializedVersion: 4
@@ -1010,6 +998,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.01, y: 4.0912485}
   m_EdgeRadius: 0
+--- !u!114 &1619706079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619706073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c9ad37f2ba4c94e8237a570f7d47ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  albedo: 1
+  color: {r: 0, g: 0, b: 0, a: 0}
+  albedospeed: 5
+  ansr: {fileID: 171711931}
+--- !u!114 &1619706080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619706073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89f7caf656ae2c42b5580e403c86bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  albedo: 1
+  color: {r: 0, g: 0, b: 0, a: 0}
+  albedospeed: 5
 --- !u!1 &1695818467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,6 +1176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   albedo: 1
+  color: {r: 0, g: 0, b: 0, a: 0}
   albedospeed: 3
 --- !u!1 &1879774506
 GameObject:

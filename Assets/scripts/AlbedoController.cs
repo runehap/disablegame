@@ -7,6 +7,7 @@ public class AlbedoController : MonoBehaviour
     private Rigidbody2D eleri;
     private SpriteRenderer elesr;
     public float albedo = 1f;
+    public Color color;
     [SerializeField]
     public float albedospeed = 0.5f;
 
@@ -36,7 +37,7 @@ public class AlbedoController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Color color = new Color(elesr.color.r, elesr.color.g, elesr.color.b, albedo);
+        color = new Color(elesr.color.r, elesr.color.g, elesr.color.b, albedo);
         elesr.color = Color.Lerp(elesr.color, color, Time.deltaTime * albedospeed);
     }
 }
