@@ -5,10 +5,20 @@ using UnityEngine;
 public class extrahuman : MonoBehaviour
 {
     public float speed = 8f;
+    private SpriteRenderer sr;
     private Rigidbody2D huri;
     void Start()
     {
         huri = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+        if(transform.position.y > -0.8)
+        {
+            sr.sortingOrder = 1;
+        }
+        else
+        {
+            sr.sortingOrder = 3;
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

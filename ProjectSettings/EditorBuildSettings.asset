@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/substation1.unity
     guid: 126b1cc70c1399e48900f2fb1bb4294a
+  - enabled: 1
+    path: Assets/Scenes/substation2.unity
+    guid: be46d0357362d5a419ff115caaafb91e
+  - enabled: 1
+    path: Assets/Scenes/subway1.unity
+    guid: 9d1b1e08305ba904c9f40f463332cf57
   m_configObjects: {}
