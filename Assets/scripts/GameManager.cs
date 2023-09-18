@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //timer
-    [SerializeField]
-    public static float limittime = 100f;
-    private GameObject time;
+    // [SerializeField]
+    // public static float limittime = 100f;
+    // private GameObject time;
 
     [SerializeField]
     public string nextscene = "substation1";
@@ -22,13 +22,13 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Fadein();
-        time = GetComponent<Text>();
+        //time = GetComponent<Text>();
     }
     
     void Update()
     {
-        limittime -= Time.deltaTime;
-        time.text = "제한시간 : " + Mathf.Round(limittime);
+        // limittime -= Time.deltaTime;
+        // time.text = "제한시간 : " + Mathf.Round(limittime);
     }
 
 
