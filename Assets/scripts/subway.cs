@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class subway : MonoBehaviour
 {
+    public bool isdooropen = false;
     Animator anim;
     [SerializeField]
     GameObject stop;
@@ -34,6 +35,7 @@ public class subway : MonoBehaviour
     {
         if (collision.name == "stop1")
         {
+            isdooropen = true;
             anim.SetBool("isdooropen", true);
             Invoke("doorclose", 5);
         }
@@ -48,6 +50,7 @@ public class subway : MonoBehaviour
     }
     void doorclose()
     {
+        isdooropen = false;
         anim.SetBool("isdooropen", false);
         Invoke("stop2", 3);
     }
