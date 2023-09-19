@@ -20,7 +20,7 @@ public class subway : MonoBehaviour
     }
 
     
-    void Update()
+    void FixedUpdate()
     {
         Vector3 velo = Vector3.zero;
 
