@@ -13,7 +13,7 @@ public class screendoor : MonoBehaviour
     }
 
     
-    void Update()
+    void FixedUpdate()
     {
          if(obj.GetComponent<subway>().isdooropen == true)
         {
