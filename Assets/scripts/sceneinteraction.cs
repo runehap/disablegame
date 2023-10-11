@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class sceneinteraction : MonoBehaviour
 {
+    sceneinteraction si;
     private Rigidbody2D rg;
     private bool istrigger = false;
     private bool isclick = false;
@@ -26,6 +27,7 @@ public class sceneinteraction : MonoBehaviour
 
     void Start()
     {
+        si = GetComponent<sceneinteraction>();
         rg = GetComponent<Rigidbody2D>();
         selpo = new Vector3(transform.position.x, transform.position.y +selpoy, transform.position.z);
         

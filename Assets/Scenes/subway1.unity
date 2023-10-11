@@ -388,6 +388,8 @@ GameObject:
   - component: {fileID: 165708856}
   - component: {fileID: 165708855}
   - component: {fileID: 165708858}
+  - component: {fileID: 165708859}
+  - component: {fileID: 165708860}
   m_Layer: 0
   m_Name: screendoor
   m_TagString: Untagged
@@ -494,6 +496,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3219dfae74479c439ceb4921aa65a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &165708859
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165708854}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.54, y: 0.47}
+    newSize: {x: 0.54, y: 0.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54, y: 0.47}
+  m_EdgeRadius: 0
+--- !u!114 &165708860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165708854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2cc041c37726b4f922d0d5eca9e82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantUse: "\uD720\uCCB4\uC5B4\uB294 \uD574\uB2F9 \uC2DC\uC124\uC744 \uC774\uC6A9\uD560
+    \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  CanUse: 1
+  go: {fileID: 0}
+  gm: {fileID: 1921432110}
+  selectprefeb: {fileID: 6596078368896207179, guid: aca939e5a2ad49f478442b7fd9f544fa, type: 3}
 --- !u!1 &215617244
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +620,8 @@ GameObject:
   - component: {fileID: 289141738}
   - component: {fileID: 289141737}
   - component: {fileID: 289141736}
+  - component: {fileID: 289141740}
+  - component: {fileID: 289141739}
   m_Layer: 0
   m_Name: screendoor (5)
   m_TagString: Untagged
@@ -680,6 +728,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &289141739
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289141734}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.54, y: 0.47}
+    newSize: {x: 0.54, y: 0.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54, y: 0.47}
+  m_EdgeRadius: 0
+--- !u!114 &289141740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289141734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2cc041c37726b4f922d0d5eca9e82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantUse: "\uD720\uCCB4\uC5B4\uB294 \uD574\uB2F9 \uC2DC\uC124\uC744 \uC774\uC6A9\uD560
+    \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  CanUse: 1
+  go: {fileID: 0}
+  gm: {fileID: 1921432110}
+  selectprefeb: {fileID: 6596078368896207179, guid: aca939e5a2ad49f478442b7fd9f544fa, type: 3}
 --- !u!1 &290980855
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +842,8 @@ GameObject:
   - component: {fileID: 428782031}
   - component: {fileID: 428782030}
   - component: {fileID: 428782029}
+  - component: {fileID: 428782033}
+  - component: {fileID: 428782032}
   m_Layer: 0
   m_Name: screendoor (8)
   m_TagString: Untagged
@@ -856,6 +950,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &428782032
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428782027}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.54, y: 0.47}
+    newSize: {x: 0.54, y: 0.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54, y: 0.47}
+  m_EdgeRadius: 0
+--- !u!114 &428782033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428782027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2cc041c37726b4f922d0d5eca9e82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantUse: "\uD720\uCCB4\uC5B4\uB294 \uD574\uB2F9 \uC2DC\uC124\uC744 \uC774\uC6A9\uD560
+    \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  CanUse: 1
+  go: {fileID: 0}
+  gm: {fileID: 1921432110}
+  selectprefeb: {fileID: 6596078368896207179, guid: aca939e5a2ad49f478442b7fd9f544fa, type: 3}
 --- !u!1 &461842686
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +1006,8 @@ GameObject:
   - component: {fileID: 461842689}
   - component: {fileID: 461842688}
   - component: {fileID: 461842687}
+  - component: {fileID: 461842692}
+  - component: {fileID: 461842691}
   m_Layer: 0
   m_Name: screendoor (1)
   m_TagString: Untagged
@@ -974,6 +1114,50 @@ Transform:
   m_Father: {fileID: 1052682122}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &461842691
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461842686}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.54, y: 0.47}
+    newSize: {x: 0.54, y: 0.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54, y: 0.47}
+  m_EdgeRadius: 0
+--- !u!114 &461842692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461842686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2cc041c37726b4f922d0d5eca9e82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantUse: "\uD720\uCCB4\uC5B4\uB294 \uD574\uB2F9 \uC2DC\uC124\uC744 \uC774\uC6A9\uD560
+    \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  CanUse: 1
+  go: {fileID: 0}
+  gm: {fileID: 1921432110}
+  selectprefeb: {fileID: 6596078368896207179, guid: aca939e5a2ad49f478442b7fd9f544fa, type: 3}
 --- !u!1 &471277424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,6 +1575,8 @@ GameObject:
   - component: {fileID: 866969111}
   - component: {fileID: 866969110}
   - component: {fileID: 866969109}
+  - component: {fileID: 866969113}
+  - component: {fileID: 866969112}
   m_Layer: 0
   m_Name: screendoor (2)
   m_TagString: Untagged
@@ -1497,6 +1683,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &866969112
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866969107}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.54, y: 0.47}
+    newSize: {x: 0.54, y: 0.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54, y: 0.47}
+  m_EdgeRadius: 0
+--- !u!114 &866969113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866969107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2cc041c37726b4f922d0d5eca9e82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantUse: "\uD720\uCCB4\uC5B4\uB294 \uD574\uB2F9 \uC2DC\uC124\uC744 \uC774\uC6A9\uD560
+    \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  CanUse: 1
+  go: {fileID: 0}
+  gm: {fileID: 1921432110}
+  selectprefeb: {fileID: 6596078368896207179, guid: aca939e5a2ad49f478442b7fd9f544fa, type: 3}
 --- !u!1 &1052682121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,6 +1736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1052682122}
+  - component: {fileID: 1052682123}
   m_Layer: 0
   m_Name: screendoors
   m_TagString: Untagged
@@ -1537,6 +1768,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1052682123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052682121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2cc041c37726b4f922d0d5eca9e82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantUse: "\uD720\uCCB4\uC5B4\uB294 \uD574\uB2F9 \uC2DC\uC124\uC744 \uC774\uC6A9\uD560
+    \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  CanUse: 1
+  go: {fileID: 0}
+  gm: {fileID: 1921432110}
+  selectprefeb: {fileID: 6596078368896207179, guid: aca939e5a2ad49f478442b7fd9f544fa, type: 3}
 --- !u!1 &1296191350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,6 +1899,8 @@ GameObject:
   - component: {fileID: 1525847522}
   - component: {fileID: 1525847521}
   - component: {fileID: 1525847520}
+  - component: {fileID: 1525847524}
+  - component: {fileID: 1525847523}
   m_Layer: 0
   m_Name: screendoor (6)
   m_TagString: Untagged
@@ -1756,6 +2007,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1525847523
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525847518}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.54, y: 0.47}
+    newSize: {x: 0.54, y: 0.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54, y: 0.47}
+  m_EdgeRadius: 0
+--- !u!114 &1525847524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525847518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2cc041c37726b4f922d0d5eca9e82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantUse: "\uD720\uCCB4\uC5B4\uB294 \uD574\uB2F9 \uC2DC\uC124\uC744 \uC774\uC6A9\uD560
+    \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  CanUse: 1
+  go: {fileID: 0}
+  gm: {fileID: 1921432110}
+  selectprefeb: {fileID: 6596078368896207179, guid: aca939e5a2ad49f478442b7fd9f544fa, type: 3}
 --- !u!1 &1567947216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,6 +2628,8 @@ GameObject:
   - component: {fileID: 1998515948}
   - component: {fileID: 1998515947}
   - component: {fileID: 1998515946}
+  - component: {fileID: 1998515950}
+  - component: {fileID: 1998515949}
   m_Layer: 0
   m_Name: screendoor (7)
   m_TagString: Untagged
@@ -2439,6 +2736,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1998515949
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998515944}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.54, y: 0.47}
+    newSize: {x: 0.54, y: 0.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54, y: 0.47}
+  m_EdgeRadius: 0
+--- !u!114 &1998515950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998515944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2cc041c37726b4f922d0d5eca9e82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantUse: "\uD720\uCCB4\uC5B4\uB294 \uD574\uB2F9 \uC2DC\uC124\uC744 \uC774\uC6A9\uD560
+    \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  CanUse: 1
+  go: {fileID: 0}
+  gm: {fileID: 1921432110}
+  selectprefeb: {fileID: 6596078368896207179, guid: aca939e5a2ad49f478442b7fd9f544fa, type: 3}
 --- !u!1 &2082797731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,6 +2961,8 @@ GameObject:
   - component: {fileID: 2101268499}
   - component: {fileID: 2101268498}
   - component: {fileID: 2101268497}
+  - component: {fileID: 2101268501}
+  - component: {fileID: 2101268500}
   m_Layer: 0
   m_Name: screendoor (3)
   m_TagString: Untagged
@@ -2726,6 +3069,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2101268500
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101268495}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.54, y: 0.47}
+    newSize: {x: 0.54, y: 0.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54, y: 0.47}
+  m_EdgeRadius: 0
+--- !u!114 &2101268501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101268495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2cc041c37726b4f922d0d5eca9e82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantUse: "\uD720\uCCB4\uC5B4\uB294 \uD574\uB2F9 \uC2DC\uC124\uC744 \uC774\uC6A9\uD560
+    \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  CanUse: 1
+  go: {fileID: 0}
+  gm: {fileID: 1921432110}
+  selectprefeb: {fileID: 6596078368896207179, guid: aca939e5a2ad49f478442b7fd9f544fa, type: 3}
 --- !u!1 &2102860003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,6 +3125,8 @@ GameObject:
   - component: {fileID: 2102860007}
   - component: {fileID: 2102860006}
   - component: {fileID: 2102860005}
+  - component: {fileID: 2102860009}
+  - component: {fileID: 2102860008}
   m_Layer: 0
   m_Name: screendoor (4)
   m_TagString: Untagged
@@ -2844,3 +3233,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2102860008
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102860003}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.54, y: 0.47}
+    newSize: {x: 0.54, y: 0.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54, y: 0.47}
+  m_EdgeRadius: 0
+--- !u!114 &2102860009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102860003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2cc041c37726b4f922d0d5eca9e82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantUse: "\uD720\uCCB4\uC5B4\uB294 \uD574\uB2F9 \uC2DC\uC124\uC744 \uC774\uC6A9\uD560
+    \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  CanUse: 1
+  go: {fileID: 0}
+  gm: {fileID: 1921432110}
+  selectprefeb: {fileID: 6596078368896207179, guid: aca939e5a2ad49f478442b7fd9f544fa, type: 3}
