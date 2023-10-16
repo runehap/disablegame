@@ -3,15 +3,30 @@ using System.Collections.Generic;
 using Microsoft.Cci;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Player3 : MonoBehaviour
 {
+    [SerializeField]
+    private bool istrigger = false;
+    public TalkManager talkmanger;
+    public sceneinteraction sc;
+    public GameManager gm;
+
     Vector2 inputvec;
     [SerializeField]
     bool movelock = false;
     [SerializeField]
     float speed = 6f;
+
+    //select button
+    public GameObject selectprefeb;
+    private Vector3 selpo;
+    private float selpoy = 4f;
+    // 텍스트 
     
+
     Rigidbody2D rigid;
     SpriteRenderer sr;
     Animator anim;
@@ -20,6 +35,7 @@ public class Player3 : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        
     }
 
     
@@ -43,11 +59,65 @@ public class Player3 : MonoBehaviour
 
             else
                 anim.SetBool("isMove", true);
+
         }
+
+
+        if (istrigger == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Return) && sc.isclick == false)
+            {
+                sc.isclick = true;
+                if (sc.CanUse == true)
+                {
+                    gm.GetComponent<GameManager>().Fadeout();
+                    sc.Invoke("clickoff", 2);
+                }
+                else
+                {
+                    sc.go.GetComponent<Text>().text = sc.cantUse;
+                    sc.go.gameObject.SetActive(true);
+
+                    sc.Invoke("setacoff", 2);
+                }
+            }
+
+        }
+
+
     }
 
     void FixedUpdate() {
         Vector2 nextvec = inputvec.normalized * speed;
         rigid.velocity = nextvec;
+
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.tag == "interactive")
+        {
+            istrigger = true;
+            sc = collision.GetComponent<sceneinteraction>();
+            selpo = new Vector3(collision.transform.position.x, collision.transform.position.y + selpoy, collision.transform.position.z);
+            GameObject sel = Instantiate(selectprefeb, selpo, transform.rotation);
+        }
+
+    }
+
+   
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "interactive")
+        {
+            istrigger = false;
+            Destroy(GameObject.Find(selectprefeb.name + "(Clone)"));
+
+        }
+    }
+
+   
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - system
   - slowspeed
+  - interactive
   layers:
   - Default
   - TransparentFX
