@@ -13,10 +13,11 @@ public class Player3 : MonoBehaviour
     public TalkManager talkmanger;
     public sceneinteraction sc;
     public GameManager gm;
+    public GameObject triggerob;
 
     Vector2 inputvec;
     [SerializeField]
-    bool movelock = false;
+    public bool movelock = false;
     [SerializeField]
     float speed = 6f;
 
@@ -35,12 +36,23 @@ public class Player3 : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        
+       
     }
 
     
     void Update()
     {
+        if(talkmanger.isAction)
+        {
+            inputvec.x = 0f;
+            anim.SetBool("isMove", false);
+            movelock = true;
+        }
+        else if(!talkmanger.isAction)
+        {
+            movelock = false;
+        }
+
         if (movelock == false)
         {
             inputvec.x = Input.GetAxisRaw("Horizontal");
@@ -82,8 +94,14 @@ public class Player3 : MonoBehaviour
                 }
             }
 
+            if(Input.GetButtonDown("Jump"))
+            {
+                talkmanger.Action(triggerob);
+           
+            }
+            
         }
-
+        
 
     }
 
@@ -100,6 +118,7 @@ public class Player3 : MonoBehaviour
         if (collision.tag == "interactive")
         {
             istrigger = true;
+            triggerob = collision.gameObject;
             sc = collision.GetComponent<sceneinteraction>();
             selpo = new Vector3(collision.transform.position.x, collision.transform.position.y + selpoy, collision.transform.position.z);
             GameObject sel = Instantiate(selectprefeb, selpo, transform.rotation);
