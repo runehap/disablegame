@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TalkManager : MonoBehaviour
 {
+    public Image myPorImg;
+
     public dialogManager dialog;
     public Player3 player;
     public GameObject talkPanel;
@@ -38,11 +40,31 @@ public class TalkManager : MonoBehaviour
 
         if(isNpc)
         {
-            talkText.text = talkData;
+            talkText.text = talkData.Split(':')[0];
+           
+            if(int.Parse(talkData.Split(':')[1]) >= 100)
+            {
+                myPorImg.sprite = dialog.GetPor(0, int.Parse(talkData.Split(':')[1])%100);
+            }
+            else
+            {
+                myPorImg.sprite = dialog.GetPor(id, int.Parse(talkData.Split(':')[1]));
+            }
+
+            myPorImg.color = new Color(1, 1, 1, 1);
         }
         else
         {
-            talkText.text = talkData;
+            talkText.text = talkData.Split(':')[0];
+
+            if (int.Parse(talkData.Split(':')[1]) >= 100)
+            {
+                myPorImg.sprite = dialog.GetPor(0, int.Parse(talkData.Split(':')[1]) % 100);
+            }
+           
+
+
+            myPorImg.color = new Color(1, 1, 1, 1);
         }
         isAction = true;
         talkIndex++;
