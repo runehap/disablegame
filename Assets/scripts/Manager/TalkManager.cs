@@ -7,10 +7,12 @@ public class TalkManager : MonoBehaviour
 {
     public Image myPorImg;
 
+  
+    public Animator talkPanel;
+    public Animator poranim;
     public dialogManager dialog;
     public Player3 player;
-    public GameObject talkPanel;
-    public Text talkText;
+    public TypeEffect talk;
     public GameObject scanObject;
     public bool isAction = true;
     public int talkIndex;
@@ -23,8 +25,9 @@ public class TalkManager : MonoBehaviour
         scanObject = scanObj;
         ObjData objData = scanObject.GetComponent<ObjData>();
         Talk(objData.id, objData.isNpc);
-        
-        talkPanel.SetActive(isAction);
+
+        talkPanel.SetBool("isShow", isAction);
+     
     }
 
     void Talk(int id,bool isNpc)
@@ -40,7 +43,7 @@ public class TalkManager : MonoBehaviour
 
         if(isNpc)
         {
-            talkText.text = talkData.Split(':')[0];
+            talk.SetMsg(talkData.Split(':')[0]);
            
             if(int.Parse(talkData.Split(':')[1]) >= 100)
             {
@@ -52,19 +55,21 @@ public class TalkManager : MonoBehaviour
             }
 
             myPorImg.color = new Color(1, 1, 1, 1);
+            poranim.SetTrigger("Doeffect");
+            
         }
         else
         {
-            talkText.text = talkData.Split(':')[0];
+            talk.SetMsg(talkData.Split(':')[0]);
 
             if (int.Parse(talkData.Split(':')[1]) >= 100)
             {
                 myPorImg.sprite = dialog.GetPor(0, int.Parse(talkData.Split(':')[1]) % 100);
             }
            
-
-
             myPorImg.color = new Color(1, 1, 1, 1);
+            poranim.SetTrigger("Doeffect");
+
         }
         isAction = true;
         talkIndex++;
