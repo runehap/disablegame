@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class subway : MonoBehaviour
 {
+    public TalkManager tm;
     public bool isdooropen = false;
     Animator anim;
     [SerializeField]
@@ -22,6 +23,10 @@ public class subway : MonoBehaviour
     
     void FixedUpdate()
     {
+        if( tm.istimestop == true)
+        {
+            CancelInvoke("doorclose");
+        }
         Vector3 velo = Vector3.zero;
 
         curentTime -= Time.deltaTime/4;
@@ -33,7 +38,7 @@ public class subway : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "stop1")
+        if (collision.name == "stop1" && tm.istimestop == false)
         {
             isdooropen = true;
             anim.SetBool("isdooropen", true);

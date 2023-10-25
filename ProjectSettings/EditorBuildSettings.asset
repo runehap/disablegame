@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/subway1.unity
     guid: 9d1b1e08305ba904c9f40f463332cf57
+  - enabled: 1
+    path: Assets/Scenes/demo end.unity
+    guid: e9ecef921a8c04748bf7cb7d11e6a5f1
   m_configObjects: {}

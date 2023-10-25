@@ -9,6 +9,8 @@ using UnityEngine.UI;
 public class Player3 : MonoBehaviour
 {
     [SerializeField]
+    ObjData objda;
+    public bool istriggerinter = false;
     private bool istrigger = false;
     public TalkManager talkmanger;
     public sceneinteraction sc;
@@ -33,6 +35,7 @@ public class Player3 : MonoBehaviour
     Animator anim;
     void Start()
     {
+        Application.targetFrameRate = 60;
         rigid = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
@@ -77,22 +80,22 @@ public class Player3 : MonoBehaviour
 
         if (istrigger == true)
         {
-            if (Input.GetKeyDown(KeyCode.Return) && sc.isclick == false)
-            {
-                sc.isclick = true;
-                if (sc.CanUse == true)
-                {
-                    gm.GetComponent<GameManager>().Fadeout();
-                    sc.Invoke("clickoff", 2);
-                }
-                else
-                {
-                    sc.go.GetComponent<Text>().text = sc.cantUse;
-                    sc.go.gameObject.SetActive(true);
+            //if (Input.GetKeyDown(KeyCode.Return) && sc.isclick == false)
+            //{
+            //    sc.isclick = true;
+            //    if (sc.CanUse == true)
+            //    {
+            //        gm.GetComponent<GameManager>().Fadeout();
+            //        sc.Invoke("clickoff", 2);
+            //    }
+            //    else
+            //    {
+            //        sc.go.GetComponent<Text>().text = sc.cantUse;
+            //        sc.go.gameObject.SetActive(true);
 
-                    sc.Invoke("setacoff", 2);
-                }
-            }
+            //        sc.Invoke("setacoff", 2);
+            //    }
+            //}
 
             if(Input.GetButtonDown("Jump"))
             {
@@ -100,6 +103,14 @@ public class Player3 : MonoBehaviour
            
             }
             
+        }
+
+        if(istriggerinter == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                talkmanger.Action(triggerob);
+            }
         }
         
 
@@ -114,7 +125,7 @@ public class Player3 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        objda = collision.GetComponent<ObjData>();
         if (collision.tag == "interactive")
         {
             istrigger = true;
@@ -122,6 +133,15 @@ public class Player3 : MonoBehaviour
             sc = collision.GetComponent<sceneinteraction>();
             selpo = new Vector3(collision.transform.position.x, collision.transform.position.y + selpoy, collision.transform.position.z);
             GameObject sel = Instantiate(selectprefeb, selpo, transform.rotation);
+        }
+
+        if(collision.tag == "triggerinter" && objda.isused == false)
+        {
+            triggerob = collision.gameObject;
+            istriggerinter = true;
+            talkmanger.Action(collision.gameObject);
+
+            
         }
 
     }

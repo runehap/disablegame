@@ -11,9 +11,9 @@ public class TypeEffect : MonoBehaviour
     AudioSource audioSource;
     string targetMsg;
     Text msgText;
-    int index;
+    public int index;
     float interval;
-    bool isAnim;
+    public bool isAnim;
 
     public void Awake()
     {
@@ -44,6 +44,7 @@ public class TypeEffect : MonoBehaviour
         EndCursor.SetActive(false);
 
         interval = 1.0f / CharPerSeconds;
+       isAnim = true;
         Invoke("Effecting", interval);
     }
     
@@ -63,7 +64,7 @@ public class TypeEffect : MonoBehaviour
 
         index++;
 
-        isAnim = true;
+        
         Invoke("Effecting", interval);
     }
 
