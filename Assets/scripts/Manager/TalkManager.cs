@@ -26,12 +26,16 @@ public class TalkManager : MonoBehaviour
     public int nextcode;
     public int nextcode2;
     public bool istimestop = false;
+    public GameObject button;
+
+  
 
     public void Action(GameObject scanObj)
     {
-        
-        
+
+       
         isAction = true;
+        button.SetActive(false);
         scanObject = scanObj;
         objData = scanObject.GetComponent<ObjData>();
         if(objData.isstair == false)
@@ -80,7 +84,8 @@ public class TalkManager : MonoBehaviour
             player.istriggerinter = false;
             objData.isused = true;
             isAction = false;
-            talkIndex = 0;
+            button.SetActive(true);
+            talkIndex = 0;  
             return;
         }
 

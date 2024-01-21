@@ -33,6 +33,9 @@ public class Player3 : MonoBehaviour
     Rigidbody2D rigid;
     SpriteRenderer sr;
     Animator anim;
+    public Image rb;
+    public Image lb;
+    public Image interbutton;
     void Start()
     {
         Application.targetFrameRate = 60;
@@ -62,9 +65,42 @@ public class Player3 : MonoBehaviour
 
             // 방향전환
             if (Input.GetAxisRaw("Horizontal") < 0)
+            {
                 sr.flipX = true;
+            }
             else if (Input.GetAxisRaw("Horizontal") > 0)
+            {
                 sr.flipX = false;
+            }
+
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                lb.color = new Color(178 / 255f, 178 / 255f, 178 / 255f, 1);
+            }
+            else
+            {
+                lb.color = new Color(1.0f, 1.0f, 1.0f);
+            }
+
+
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                rb.color = new Color(178 / 255f, 178 / 255f, 178 / 255f, 1);
+            }
+            else
+            { 
+                rb.color = new Color(1, 1, 1);
+            }
+            //else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
+            //{
+            //   lb.color = new Color(1.0f, 1.0f, 1.0f);
+            //}
+            //else if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
+            //{
+            //    rb.color = new Color(1, 1, 1);
+            //}
+
+          
 
 
 
@@ -97,12 +133,20 @@ public class Player3 : MonoBehaviour
             //    }
             //}
 
-            if(Input.GetButtonDown("Jump"))
+            if(Input.GetButtonUp("Jump"))
             {
                 talkmanger.Action(triggerob);
            
             }
-            
+            else if (Input.GetButton("Jump"))
+            {
+                interbutton.color = new Color(0.7f, 0.7f, 0.7f);
+            }
+            else
+            {
+                interbutton.color = new Color(1, 1, 1);
+            }
+
         }
 
         if(istriggerinter == true)
@@ -133,6 +177,8 @@ public class Player3 : MonoBehaviour
             sc = collision.GetComponent<sceneinteraction>();
             selpo = new Vector3(collision.transform.position.x, collision.transform.position.y + selpoy, collision.transform.position.z);
             GameObject sel = Instantiate(selectprefeb, selpo, transform.rotation);
+            interbutton.enabled = true;
+
         }
 
         if(collision.tag == "triggerinter" && objda.isused == false)
@@ -154,6 +200,7 @@ public class Player3 : MonoBehaviour
         {
             istrigger = false;
             Destroy(GameObject.Find(selectprefeb.name + "(Clone)"));
+            interbutton.enabled = false;
 
         }
     }

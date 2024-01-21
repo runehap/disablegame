@@ -17,6 +17,7 @@ public class startplayer : MonoBehaviour
     public bool ismove = false;
     GameObject target;
     GameManager gm;
+    public GameObject button;
     
     void Start()
     {
@@ -30,6 +31,8 @@ public class startplayer : MonoBehaviour
     
     void Update()
     {
+        button.SetActive(false);
+
         if(ismove == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
